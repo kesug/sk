@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>𝗥𝗜𝗖𝗛𝗠𝗘𝗘 𝗠𝗔𝗥𝗔𝗧𝗛𝗜 𝗦𝗔𝗡𝗞𝗘𝗧 𝗢𝗥𝗜𝗚𝗜𝗡𝗔𝗟</title>
+    
+    <!-- Google Fonts: Clean, Elegant, Modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code (Preserved) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1166379392026151');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1166379392026151&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+            background: #0c0f1c;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Premium Animated Gradient Background */
+        .premium-bg {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, #1a1f2e, #0a0d18, #05070f);
+            z-index: -3;
+        }
+        
+        .soft-glow {
+            position: fixed;
+            width: 80vw;
+            height: 80vw;
+            background: radial-gradient(circle, rgba(180, 140, 255, 0.15), transparent 70%);
+            top: -30%;
+            left: -20%;
+            z-index: -2;
+            filter: blur(70px);
+            animation: gentleFloat 16s infinite alternate;
+        }
+        
+        .soft-glow-2 {
+            position: fixed;
+            width: 70vw;
+            height: 70vw;
+            background: radial-gradient(circle, rgba(100, 180, 255, 0.12), transparent);
+            bottom: -30%;
+            right: -20%;
+            z-index: -2;
+            filter: blur(80px);
+            animation: gentleFloat2 14s infinite alternate;
+        }
+        
+        @keyframes gentleFloat {
+            0% { transform: translate(0,0) scale(1); opacity: 0.4; }
+            100% { transform: translate(5%, 3%) scale(1.1); opacity: 0.7; }
+        }
+        
+        @keyframes gentleFloat2 {
+            0% { transform: translate(0,0) scale(1); opacity: 0.3; }
+            100% { transform: translate(-4%, -5%) scale(1.15); opacity: 0.6; }
+        }
+        
+        /* Premium Card — Ultra Smooth Glassmorphism */
+        .premium-card {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(18, 22, 35, 0.55);
+            backdrop-filter: blur(18px);
+            border-radius: 56px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(255, 255, 255, 0.05) inset;
+            padding: 34px 28px 40px;
+            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), box-shadow 0.4s ease;
+            z-index: 10;
+        }
+        
+        .premium-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 40px 60px -20px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 215, 150, 0.2) inset;
+            border-color: rgba(255, 215, 150, 0.25);
+        }
+        
+        /* Elegant Avatar with Soft Ring */
+        .avatar-premium {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 18px;
+            position: relative;
+        }
+        
+        .avatar-premium img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 215, 150, 0.7);
+            box-shadow: 0 15px 25px -10px rgba(0,0,0,0.4), 0 0 0 5px rgba(255,215,150,0.1);
+            transition: 0.3s;
+        }
+        
+        .avatar-premium::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #D4AF37, #F5E7B2, #C9A03D);
+            opacity: 0.4;
+            z-index: -1;
+            transition: opacity 0.4s;
+        }
+        
+        .avatar-premium:hover::after {
+            opacity: 0.8;
+        }
+        
+        /* Title with Elegant Gradient */
+        .title-premium {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #FFFFFF, #F5E7B2, #E2C28B);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .trust-premium {
+            background: rgba(255, 215, 150, 0.1);
+            backdrop-filter: blur(4px);
+            border-radius: 60px;
+            padding: 6px 20px;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 500;
+            color: #F5E7B2;
+            border: 0.5px solid rgba(245, 231, 178, 0.3);
+            margin-bottom: 20px;
+        }
+        
+        /* Badges - Minimal Premium Pills */
+        .badge-row-premium {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 15px 0 20px;
+            flex-wrap: wrap;
+        }
+        
+        .badge-premium {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(4px);
+            border-radius: 100px;
+            padding: 8px 22px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #EAE5D9;
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+        
+        .badge-premium:hover {
+            background: rgba(255, 215, 150, 0.15);
+            border-color: rgba(255, 215, 150, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Market Data — Refined Tiles */
+        .market-premium {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            margin: 25px 0 28px;
+            flex-wrap: wrap;
+        }
+        
+        .market-tile-premium {
+            flex: 1;
+            background: rgba(10, 14, 23, 0.6);
+            backdrop-filter: blur(8px);
+            border-radius: 32px;
+            padding: 12px 10px;
+            text-align: center;
+            border: 0.5px solid rgba(255, 215, 150, 0.2);
+            transition: all 0.25s;
+        }
+        
+        .market-tile-premium:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255, 215, 150, 0.5);
+            background: rgba(20, 25, 40, 0.7);
+            box-shadow: 0 10px 20px -8px rgba(0,0,0,0.3);
+        }
+        
+        .market-label-premium {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #D4AF37;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .market-number-premium {
+            font-weight: 700;
+            font-size: 19px;
+            color: #FFFFFF;
+            letter-spacing: -0.2px;
+        }
+        
+        .trend-premium {
+            color: #2ecc71;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 4px;
+        }
+        
+        /* CTA Button — Elegant Gold Gradient */
+        .cta-premium {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(105deg, #2C3E50, #1A2632);
+            color: #F5E7B2;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 16px 20px;
+            border-radius: 100px;
+            margin: 18px 0 30px;
+            transition: all 0.3s ease;
+            border: 0.5px solid rgba(212, 175, 55, 0.5);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+            letter-spacing: 0.3px;
+        }
+        
+        .cta-premium:hover {
+            background: linear-gradient(105deg, #3A5068, #2C3E50);
+            color: #FFE6B3;
+            transform: scale(1.02);
+            border-color: #D4AF37;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+            gap: 16px;
+        }
+        
+        /* Features — Clean, Soft List */
+        .features-premium {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+        
+        .feature-premium {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(4px);
+            border-radius: 60px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #E8E2D4;
+            border-left: 3px solid #D4AF37;
+            transition: 0.2s;
+        }
+        
+        .feature-premium:hover {
+            background: rgba(212, 175, 55, 0.08);
+            transform: translateX(6px);
+            border-left-width: 4px;
+        }
+        
+        .feature-icon-premium {
+            font-size: 22px;
+        }
+        
+        /* Footer */
+        .footer-premium {
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            color: #D4AF37;
+            margin: 8px 0 5px;
+            letter-spacing: 0.3px;
+        }
+        
+        .handle-premium {
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            color: #9A8C6F;
+            margin-bottom: 16px;
+        }
+        
+        .agency-premium {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .agency-premium a {
+            background: rgba(212, 175, 55, 0.12);
+            backdrop-filter: blur(4px);
+            padding: 8px 24px;
+            border-radius: 60px;
+            color: #F5E7B2;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 0.5px solid rgba(212, 175, 55, 0.4);
+            transition: 0.2s;
+        }
+        
+        .agency-premium a:hover {
+            background: rgba(212, 175, 55, 0.25);
+            border-color: #D4AF37;
+            transform: translateY(-2px);
+        }
+        
+        .caption-premium {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 11px;
+            font-weight: 400;
+            color: #6B5E4A;
+            letter-spacing: 0.5px;
+        }
+        
+        @media (max-width: 480px) {
+            .premium-card {
+                padding: 26px 20px 32px;
+            }
+            .title-premium {
+                font-size: 24px;
+            }
+            .market-number-premium {
+                font-size: 16px;
+            }
+            .cta-premium {
+                font-size: 0.95rem;
+                padding: 14px 16px;
+            }
+            .feature-premium {
+                font-size: 13px;
+                padding: 10px 16px;
+            }
+        }
+        
+        /* Smooth loading fade-in */
+        .premium-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Premium Background Elements -->
+    <div class="premium-bg"></div>
+    <div class="soft-glow"></div>
+    <div class="soft-glow-2"></div>
+    
+    <div class="premium-card">
+        
+        <!-- Avatar with Elegant Ring -->
+        <div style="display: flex; justify-content: center;">
+            <div class="avatar-premium">
+                <img src="image.png" alt="Trade With Munaaf">
+            </div>
+        </div>
+        
+        <!-- Title & Trust Badge -->
+        <div class="title-premium">𝗥𝗜𝗖𝗛𝗠𝗘𝗘 𝗠𝗔𝗥𝗔𝗧𝗛𝗜 𝗦𝗔𝗡𝗞𝗘𝗧 𝗢𝗥𝗜𝗚𝗜𝗡𝗔𝗟</div>
+        <div style="display: flex; justify-content: center;">
+            <div class="trust-premium">✅ Trusted By Thousands of Learners</div>
+        </div>
+        
+        <!-- Badges -->
+        <div class="badge-row-premium">
+            <div class="badge-premium">📊 24/7 Updates</div>
+            <div class="badge-premium">💎 Free to Join</div>
+        </div>
+        
+        <!-- Market Data (Inspired by Original Values) -->
+        <div class="market-premium">
+            <div class="market-tile-premium">
+                <div class="market-label-premium">NASDAQ.USD</div>
+                <div class="market-number-premium">1323.57 <span class="trend-premium">▲ 1.2%</span></div>
+            </div>
+            <div class="market-tile-premium">
+                <div class="market-label-premium">XAU/GBP</div>
+                <div class="market-number-premium">1323.71 <span class="trend-premium">▲ 0.8%</span></div>
+            </div>
+            <div class="market-tile-premium">
+                <div class="market-label-premium">PRO MOMENTUM</div>
+                <div class="market-number-premium">1,100.20 <span class="trend-premium">⚡</span></div>
+            </div>
+        </div>
+        
+        <!-- Main Telegram CTA (Link Preserved) -->
+        <a href="https://t.me/+nMMfc_sreyBjNmQ9" target="_blank" rel="noopener noreferrer" class="cta-premium">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
+            </svg>
+            JOIN TELEGRAM CHANNEL
+        </a>
+        
+        <!-- Features (Original Content, Refined) -->
+        <div class="features-premium">
+            <div class="feature-premium">
+                <span class="feature-icon-premium">📈</span>
+                <span>Market Insights & Discussions</span>
+            </div>
+            <div class="feature-premium">
+                <span class="feature-icon-premium">🎓</span>
+                <span>Learn with Experts</span>
+            </div>
+            <div class="feature-premium">
+                <span class="feature-icon-premium">⚡</span>
+                <span>Practical Strategies</span>
+            </div>
+        </div>
+        
+        <!-- Footer Quote & Handle -->
+        <div class="footer-premium">⚡ Stay Ahead with Knowledge ⚡</div>
+        <div class="handle-premium">@Adzonn</div>
+        
+        <!-- Agency Link (Preserved) -->
+    <span class="agency-premium" style="color: #ffffff;">📱 SIVIADSAGENCY</span>
+        
+        <div class="caption-premium">
+            • premium insights • global community •
+        </div>
+    </div>
+    
+    <!-- Smooth micro-interactions -->
+    <script>
+        // Add subtle parallax or hover polish (optional)
+        const card = document.querySelector('.premium-card');
+        const marketTiles = document.querySelectorAll('.market-tile-premium');
+        
+        marketTiles.forEach(tile => {
+            tile.addEventListener('mouseenter', () => {
+                tile.style.transition = 'all 0.25s';
+            });
+        });
+    </script>
+</body>
+</html>
